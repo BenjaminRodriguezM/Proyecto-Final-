@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    list-style: none;
+}
+
+header {
+    position: relative;
+}
+body {
+    background-color: black;
+}
+.contenedor__imagen {
+    z-index: -2;
+    position: absolute;
+}
+.imagen {
+    width: 100%;
+    height: 100%;
+}
+#body {
+    overflow: hidden;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: aliceblue;
+}
+
+/* VIDEO BACKGRAUND HOME */
+
+#video {
+    z-index: -1;
+}
+#backgraund {
+    width: 100%;
+    height: 100%;
+}
+
+/* VIDEO BACKGRAUND */
+
+/* ICONOS */
+
+.contenedor__iconos {
+    display: flex;
+    justify-content: right;
+    padding-right: 300px;
+}
+.contenedor__iconos a img {
+    width: 50px;
+    height: 50px;
+    transition: 350ms;
+    padding: 0px 20px 0px 20px;
+}
+.contenedor__iconos a img:hover {
+    transform: scale(1.3);
+}
+
+/* ICONOS */
+
+/* BARRA DE NAVEGACION */
+
+.barra__padre {
+    position: fixed;
+    left: 20px;
+    top: 15px;
+    z-index: 1;
+}
+.barra ul {
+    display: flex;
+}
+.barra ul li {
+    padding: 10px 10px 0px 30px;
+}
+.barra ul li a {
+    text-decoration: none;
+    color: white;
+}
+.barra ul li a:hover{
+    padding: 5px 15px;
+    background: white;
+    color: black;
+    border-radius: 13px;
+    transition: all 1s ease;
+}
+
+/* BARRA DE NAVEGACION */
+
+#backgraund {
+    width: 100%;
+    height: 100%;
+}
+
+/* PAGINA PRINCIPAL TERMINA */
+
+/* SLIDER */
+
+#slider__padre {
+    width: 840px;
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    right: 25%;
+    align-items: center;
+}
+#slider__hijo {
+    position: relative;
+    height: 500px;
+    width: 100%;
+}
+#slider__hijo li {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+#slider__hijo li img {
+    max-width: 840px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 1px rgb(255, 255, 255, 0.9);
+}
+#slider__hijo li:first-child {
+    opacity: 1;
+}
+#slider__hijo li:target {
+    opacity: 1;
+}
+
+/* BOTONES */
+
+.botones {
+    text-align: center;
+    margin: 20px;
+}
+.botones li {
+    display: inline-block;
+    text-align: center;
+}
+.botones li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(19, 18, 18, 0.5);
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+/* BOTONES */
+
+/* SLIDER */
+
+/* INFORMACION HIUNDAI */
+
+.contenedor__informacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.contenedor__informacion iframe {
+    width: 600px;
+    height: 400px;
+    padding: 0px 0px 0px 10%;
+}
+.contenedor__informacion p {
+    font-family: 'Jost', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 80px;
+    max-width: 800px;
+    width: 100%;
+    color: white;
+}
+
+/* INFORMACION HIUNDAI */
+
+/* PAGINA PRINCIPAL TERMINA */
+
+/* HOME MOTOS COMIENZA */
+
+/* CONTENEDOR IMAGENES MOTO */
+
+.contenedor__imagenes__moto {
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenedor__imagenes__moto img {
+    max-width: 700px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+/* CONTENEDOR IMAGENES MOTO */
+
+/* CONTENEDOR VIDEO */
+
+.contenedor__video__moto {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+}
+.contenedor__video__moto p {
+    font-family: 'Jost', sans-serif;
+    color: rgb(255, 255, 255);
+    max-width: 600px;
+    max-height: 600px;
+    font-size: 22px;
+    margin-right: 2rem;
+}
+.contenedor__video__moto iframe {
+    margin-left: 5.5rem;
+}
+
+/* CONTENEDOR VIDEO */
+
+/* HOME MOTOS TERMINA */
+
+/* HOME AUTOS COMIENZA */
+
+/* CONTENEDOR IMAGENES */
+
+.contenedor__imagenes__auto {
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenedor__imagenes__auto img {
+    max-width: 700px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+/* CONTENEDOR IMAGENES */
+
+/* CONTENEDOR VIDEO */
+
+.contenedor__video__auto {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 9.5rem;
+}
+.contenedor__video__auto p {
+    margin-top: 40px;
+    font-family: 'Jost', sans-serif;
+    color: rgb(255, 255, 255);
+    max-width: 600px;
+    max-height: 600px;
+    font-size: 22px;
+    margin-left: 6rem;
+    text-align: center;
+}
+
+/* CONTENEDOR VIDEO */
+
+/* HOME AUTOS TERMINA */
+
+/* HOME CAMIONETA EMPIEZA */
+
+/* CONTENEDOR IMAGENES CAMIONETA */
+
+.contenedor__imagenes__camioneta {
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenedor__imagenes__camioneta img {
+    max-width: 700px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+/* CONTENEDOR IMAGENES CAMIONETA */
+
+/* CONTENEDOR VIDEO CAMIONETA */
+
+.contenedor__video__camioneta {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 5rem;
+}
+.contenedor__video__camioneta p {
+    font-family: 'Jost', sans-serif;
+    color: rgb(255, 255, 255);
+    max-width: 600px;
+    max-height: 600px;
+    font-size: 22px;
+    margin-right: 3rem;
+}
+.contenedor__video__camioneta iframe {
+    margin-right: 1.3rem;
+}
+
+/* CONTENEDOR VIDEO CAMIONETA */
+
+/* HOME CAMIONETA TERMINA */
+
+/* @media COMIENZA */
+
+@media (min-width: 600px) and (max-width: 1350px) {
+    .contenedor__imagenes__moto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .contenedor__imagenes__moto img {
+        max-width: 500px;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 13px;
+    }
+    #body {
+        overflow: visible;
+        overflow-x: hidden;
+    }
+    .contenedor__iconos {
+        padding-top: 80px;
+        display: flex;
+        text-align: center;
+        padding-right: 300px;
+    }
+    .contenedor__imagenes__moto:first-child {
+        padding-bottom: 70px;
+    }
+}
+/* @media TERMINA */
