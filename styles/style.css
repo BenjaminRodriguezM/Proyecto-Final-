@@ -2,16 +2,29 @@
     margin: 0;
     padding: 0;
 }
-
+ol, ul {
+    padding-left: 0%;
+}
 ul, li {
     list-style: none;
 }
-
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
 header {
     position: relative;
 }
 body {
     background-color: black;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(255,255,255, .2);
+}
+body::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 7px;
 }
 .contenedor__imagen {
     z-index: -2;
@@ -49,6 +62,7 @@ footer {
     display: flex;
     justify-content: right;
     padding-right: 300px;
+    padding-top: 75px;
 }
 .contenedor__iconos a img {
     width: 50px;
@@ -65,10 +79,16 @@ footer {
 /* BARRA DE NAVEGACION */
 
 .barra__padre {
+    background-color: rgba(59, 56, 56, 0.6);
     position: fixed;
-    left: 20px;
+    font-size: 20px;
+    padding-left: 215px;
+    padding-top: 15px;
+    max-height: 55px;
+    height: 100%;
     top: 15px;
     z-index: 1;
+    width: 100%;
 }
 .barra ul {
     display: flex;
@@ -99,66 +119,9 @@ footer {
 
 /* SLIDER */
 
-#slider__padre {
-    width: 840px;
-    position: absolute;
-    top: 28%;
-    left: 25%;
-    right: 25%;
-    align-items: center;
+.imagen-height {
+    height: 945px;
 }
-#slider__hijo {
-    position: relative;
-    height: 500px;
-    width: 100%;
-}
-#slider__hijo li {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    opacity: 0;
-    width: inherit;
-    height: inherit;
-    transition: opacity .5s;
-}
-#slider__hijo li img {
-    max-width: 840px;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 50px;
-    border: 1px rgb(255, 255, 255, 0.9);
-}
-#slider__hijo li:first-child {
-    opacity: 1;
-}
-#slider__hijo li:target {
-    opacity: 1;
-}
-
-/* BOTONES */
-
-.botones {
-    text-align: center;
-    margin: 20px;
-}
-.botones li {
-    display: inline-block;
-    text-align: center;
-}
-.botones li a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: rgba(19, 18, 18, 0.5);
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    border-radius: 100%;
-}
-
-/* BOTONES */
 
 /* SLIDER */
 
@@ -171,13 +134,13 @@ footer {
     grid-row-gap: 0px;
 }
 .contenedor__informacion iframe {
-    width: 600px;
+    width: 650px;
     height: 400px;
-    padding: 0px 0px 0px 10%;
+    padding-left: 10%;
 }
 .contenedor__informacion p {
     font-family: 'Jost', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     padding-top: 80px;
     max-width: 800px;
@@ -310,7 +273,36 @@ footer {
 
 /* @media COMIENZA */
 
-@media (min-width: 600px) and (max-width: 1350px) {
+@media (min-width: 650px) and (max-width: 1350px) {
+
+    /* EMPIEZA BARRA DE NAVEGACION */
+    .barra__padre {
+        padding-left: 0%;
+    }
+    .barra ul {
+        display: flex;
+        justify-content: center;
+    }
+    #body {
+        overflow: visible;
+        overflow-x: hidden;
+    }
+    /* TERMINA BARRA DE NAVEGACION */
+    
+    /* EMPIEZA CONTENEDOR MOTO */
+    .contenedor__imagenes__moto:first-child {
+        padding-bottom: 70px;
+    }
+    .contenedor__video__moto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0px;
+    }
+    .contenedor__video__moto p {
+        margin-right: 0px;
+        padding-bottom: 65px;
+    }
     .contenedor__imagenes__moto {
         display: flex;
         flex-direction: column;
@@ -319,23 +311,202 @@ footer {
         padding-bottom: 40px;
     }
     .contenedor__imagenes__moto img {
-        max-width: 500px;
-        max-height: 300px;
+        width: 700px;
+        height: 500px;
         object-fit: cover;
         border-radius: 13px;
+    }
+    .imagen1 {
+        padding-bottom: 70px;
+    }
+    /* EMPIEZA CONTENEDOR MOTO */
+
+    /* EMPIEZA HOME */
+    #carouselExampleIndicators img {
+        width: 100%;
+        height: 900px;
+    }
+    .contenedor__iconos {
+        padding-top: 110px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .contenedor__informacion {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-items: center;
+    }
+    .contenedor__informacion iframe {
+        width: 800px;
+        height: 400px;
+        padding: 0px;
+    }
+    /* TERMINA HOME */
+
+    /* EMPIEZA CONTENEDOR CAMIONETAS */
+    .contenedor__imagenes__camioneta {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__imagenes__camioneta img {
+        width: 700px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 13px;
+    }
+    .contenedor__video__camioneta {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor__video__camioneta p {
+        padding-top: 55px;
+        padding-bottom: 65px;
+        margin-right: 0px;
+    }
+    /* TERMINA CONTENEDOR CAMIONETAS */
+}
+@media (min-width: 650px) and (max-width: 900px) {
+    /* EMPIEZA BARRA DE NAVEGACION */
+    .barra__padre {
+        padding-left: 0%;
+    }
+    .barra ul {
+        display: flex;
+        justify-content: center;
+    }
+    #body {
+        overflow: visible;
+        overflow-x: hidden;
+    }
+    /* TERMINA BARRA DE NAVEGACION */
+    #carouselExampleIndicators img {
+        width: 100px;
+        height: 700px;
+    }
+    .imagen1 {
+        padding-bottom: 70px;
+    }
+    .contenedor__informacion {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-items: center;
+        padding-bottom: 80px;
+    }
+    .contenedor__informacion iframe {
+        width: 600px;
+        height: 300px;
+        padding: 0px;
+    }
+    .contenedor__informacion p {
+        width: 500px;
+        height: 360px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .contenedor__imagenes__moto img {
+        width: 450px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 13px;
+    }
+    .contenedor__video__moto iframe {
+        width: 450px;
+        height: 350px;
+    }
+    .contenedor__video__moto p {
+        text-align: center;
+        width: 450px;
+        height: 350px;
+        margin-right: 0px;
+        padding-bottom: 65px;
+    }
+}
+@media (min-width: 300px) and (max-width: 650px) {
+    /* EMPIEZA BARRA DE NAVEGACION */
+    .barra__padre {
+        padding-left: 0%;
+    }
+    .barra ul {
+        display: flex;
+        justify-content: center;
     }
     #body {
         overflow: visible;
         overflow-x: hidden;
     }
     .contenedor__iconos {
-        padding-top: 80px;
+        padding-top: 110px;
         display: flex;
+        width: 100%;
+        justify-content: center;
         text-align: center;
-        padding-right: 300px;
     }
-    .contenedor__imagenes__moto:first-child {
+    /* TERMINA BARRA DE NAVEGACION */
+    .imagen1 {
         padding-bottom: 70px;
+    }
+    .contenedor__informacion iframe {
+        width: 350px;
+        height: 200px;
+        padding: 0px;
+    }
+    .contenedor__informacion p {
+        width: 350px;
+        height: 200px;
+    }
+    .contenedor__informacion {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        justify-items: center;
+        padding-bottom: 80px;
+    }
+    .contenedor__imagenes__moto img {
+        width: 350px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 13px;
+    }
+    #carouselExampleIndicators img {
+        width: 100%;
+        height: 600px;
+    }
+    .barra ul li {
+        padding: 10px 10px 10px 10px;
+    }
+    .contenedor__imagenes__moto {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contenedor__video__moto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0px;
+    }
+    .contenedor__video__moto p {
+        text-align: center;
+        width: 350px;
+        height: 250px;
+        margin-right: 0px;
+        padding-bottom: 65px;
+    }
+    .contenedor__video__moto iframe {
+        width: 350px;
+        height: 250px;
     }
 }
 /* @media TERMINA */
